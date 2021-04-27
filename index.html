@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insertion</title>
+	<style>
+		body{
+			text-align: center;
+			font-family: Arial;
+		},
+		
+	</style>
+</head>
+<body>
+	<br>
+	<div>
+<h1>Insertion Sort Algorithm - JavaScript</h1>
+</div>
+
+<br>
+<hr>
+<br>
+<h3 style="color: grey;"><b>Unsorted</b> Array of numbers</h3>
+<h1 id="hoy" style="color: grey;">d</h1>
+<br>
+<br>
+<h3 style="color: green;"><b>Sorted</b> Array of numbers</h3>
+<h1 id="hey" style="color: green;">f</h1>
+
+
+<div style="margin-top:400px;">
+	<h5>Tolentino, Joseph Rey</h5>
+	<h4>BSIT-3B</h4>
+
+
+</div>
+
+
+<script>
+	function insertionSort(input) {
+    
+    for (var i = 1; i < input.length; i++) {
+       
+        var element = input[i];
+       
+        var j = i - 1;
+        while (j >= 0 && input[j] > element) {
+          
+            input[j + 1] = input[j];
+            j--;
+        }
+
+        input[j + 1] = element;
+    }
+    return document.getElementById("hey").innerHTML = input;
+}
+
+
+function a(input){
+	 return document.getElementById("hoy").innerHTML = input;
+}
+
+
+var input = [10, 8, 4, 2, 3];
+
+a(input);
+insertionSort(input);
+console.log(input);
+
+
+</script>
+</body>
+</html>
